@@ -1,15 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement("h1", {id: "heading"}, "Hello React !!!!");
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
+// This is not pure JS so browser can't understand this, browser is understanding this because of parcel
 
-    root.render(heading);
+// JSX (transpiled before it reaches the JS engine) - parcel - babel
 
-    /* 
-    heading --> is an object
-    later while updating the dom render method converts the heading object(react element into the normal HTML tag)
+// JSX = React.createElement => ReactElement - JS object => HTMLElement(render)
 
-    React can work in a small portion of a page as well
-    
-    */
+// React element
+const JsxHeading = () => <h1>JSX Syntax !!</h1>
+
+
+// functional component
+const HeadingComponent = () =>
+    (
+        <div className="heading">
+            <JsxHeading />
+            <h1>Functional component !!</h1>
+        </div>
+    )
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComponent />);

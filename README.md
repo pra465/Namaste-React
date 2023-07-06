@@ -1,3 +1,8 @@
+heading --> is an object
+    later while updating the dom render method converts the heading object(react element into the normal HTML tag)
+
+    React can work in a small portion of a page as well
+
 ## <----- Igniting our app ----->
 We have to do a lot of changes to push our code to production - 
 
@@ -69,3 +74,32 @@ Different dev and prod bundles
 To make our app production ready run this - npx parcel build index.html
 
 ** browserList - we use this to tell our app on which browser to compitable with
+
+# Episode 03 Laying the foundation
+
+** npm run start & npm start are same
+
+** for build we have only one option "npm start build"
+
+** React element is not a HTML element
+
+** React is different snd JSX is different
+
+** JSX is not HTML inside javascript , JSX is like HTML
+
+** JSX is diffrent and HTML is different
+
+** Babel is the open source JS compiler
+
+** if we have to give attributes to jsx then those should be in camelCase.
+
+** if we want to write the JSX then we have to write in round brackets.
+
+** functional component - A normal javascript function which returns some JSX
+or a function which returns a react element
+
+** component composition - component inside component 
+
+** JSX can have only one root element
+
+** React fragment - behaves like an empty tag <></> or <React.Fragment></ React.Fragment>
