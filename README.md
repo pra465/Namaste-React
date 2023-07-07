@@ -103,3 +103,9 @@ or a function which returns a react element
 ** JSX can have only one root element
 
 ** React fragment - behaves like an empty tag <></> or <React.Fragment></ React.Fragment>
+
+# Episode 04 Talk is cheap, show me the code
+
+** inline styles are given as the js object.
+
+** config driven UI - 

@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  padding: 0px 100px;
+}
+
+.logo{
+    width: 30%;
+    margin-left: 10px;
+}
+
+.nav-items ul{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.nav-items ul li {
+    display: inline;
+    margin: 0px 20px;
+    font-weight: 500;
+    font-size: 17px;
+}
