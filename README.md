@@ -109,3 +109,19 @@ or a function which returns a react element
 ** inline styles are given as the js object.
 
 ** config driven UI - 
+
+** key - if we don't give the key then react won't know which item is updated and in this case it will rerender the whole items. and if we give the key then it will only render the updated item
+
+** Giving ID as a key is not recomended.
+
+# Episode 05 Let's get hooked
+
+** Everything we do in recat can be done using normal HTML and JS. But why we are using a library or framework ? because it makes developers job easy.
+
+** Never put hardcoded data in the component file
+
+** it's a good habit to name all the constants in capital latter
+
+** in a file we can write only one default export
+
+** 

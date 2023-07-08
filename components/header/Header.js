@@ -1,9 +1,10 @@
 import "./Header.css"
-const Header = () => {
+import { LOGO_URL } from "../../utils/constant";
+export const Header = () => {
     return(
         <div className="header">
             <div className="logo-container">
-                <img className="logo" src="https://img.freepik.com/free-vector/free-delivery-logo-with-bike-man-courier_1308-48827.jpg?size=626&ext=jpg&ga=GA1.1.1015578034.1682857744&semt=ais" />
+                <img className="logo" src={LOGO_URL} />
             </div>
             <div className="nav-items">
                 <ul>
