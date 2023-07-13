@@ -124,4 +124,62 @@ or a function which returns a react element
 
 ** in a file we can write only one default export
 
-** 
+** The best thing is react keep the UI layer and the data layer together
+
+** REACT HOOKS - normal js function
+
+    - useState() - superpowerful react variables
+    - useEffect()
+
+** whenever a state variable changes React re-renders the DOM.
+
+** React is only good at DOM manuplactions
+
+# Episode 06 Exploring the world
+
+** fetch() - this superpower is not given by the javascript. this is given by the browsers.
+
+** When we were trying to call swiggy api, then our browser was showing cors error. means our browser is stopping us from fetching data from different origin.
+
+-- solution to above problem is to install chorme cors extension.
+
+** Always call the API in useEffect() Hook. useEffect(callback fun, []);
+
+Load -> API -> Render <<<<<<<<<<<<< Load -> Render -> API -> Render
+
+** conditional rendering - rendering on the basis of condition is known as conditional rendering.
+
+# Episode 07 Finding the path
+
+** useEffect() -> 
+    1. useEffect(callback()) -> when we don't pass dependency array then it will be called on every re-render
+    2. useEffect(callback(), []) -> when we pass empty dependency array then it will be called only once after initial render.
+    3. useEffect(callback(), [some_dependency]) -> when we pass some dependency then it will be called only when that dependency changes.
+
+** Never use useState hook outside the functional component
+
+**  Always use hooks on the top of your component
+
+** Never use useState in if-else and for loop, functions.
+
+** when we have to create routing then we have to create routing configuration.
+
+** createBrowserRoute - helps in creating the routing configuration. routing configuration contains the routing information wher our route will go on some url.
+
+ROuterProvider - provides the routing configuration to our app.
+
+** useRouteError -> This is used to get the information about the routing error.
+
+** ErrorElement only works in the root path.
+
+** Never use <a></a> tag in react because when we click on that link then it loads the whole page, we have alternate to this -> <Link to="/"></Link> -> this is why we call react as a single page application.
+
+** There are two types of routing - 
+    1. server side routing
+    2. client side routing
+
+** Dinamic routing - 
+
+path: /restaurants/:resID -> this is the dynamic path
+
+** Behind the scean <Link> is using anchor tag <a>
