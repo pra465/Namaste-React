@@ -183,3 +183,33 @@ ROuterProvider - provides the routing configuration to our app.
 path: /restaurants/:resID -> this is the dynamic path
 
 ** Behind the scean <Link> is using anchor tag <a>
+
+# Episode 08 Let's get classy
+
+** class component is normal class at the end of the day.
+
+** in class based component we never update the state directly.
+
+** use this.setState({count: this.state.count + 1})
+
+** Lifecycle method - 
+
+    constructor() -> render() -> componentDidMount()
+
+    When we are rendering the same component it means we are creating the two instanses of the same class.
+
+    ** react lifecycle method **
+
+    Mounting of a component happens in two phases - 
+        - Render Phase
+        - Commit phase
+
+    ** Never compare react life cycle to functional component
+
+    ** useEffect() is called on every render if we are not giving dependency array, but componentDidMount() is updated not mounted. so componentDidUpdate() runs after every render.
+
+    ** we can make componentSisMount() async but can't make useEffect() async, react will give error.
+
+# Episode 09 Optimising our App
+
+** single responsiblity principle - any class or function have single responsiblity.
