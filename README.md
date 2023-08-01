@@ -212,4 +212,20 @@ path: /restaurants/:resID -> this is the dynamic path
 
 # Episode 09 Optimising our App
 
-** single responsiblity principle - any class or function have single responsiblity.
+** single responsiblity principle - any class or function should have single responsiblity.
+
+** Modularity - we break down our code into different small small modules.
+
+-> it keeps our code testable and maintable
+
+** Hook is just a utility function
+
+** Always create a seperate file for a custom hook.
+
+** when writing the custom hook then think of two things - input and output.
+
+** we have a online listener which can help us to provide information about users online or offline
+
+** Lazy loading - when app is initially loaded then grocery is not loaded. 
+
+** Grocery is loaded when we go to the grocery url

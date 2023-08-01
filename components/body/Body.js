@@ -4,6 +4,7 @@ import { CDN_URL } from '../../utils/constant';
 import { useEffect, useState } from 'react';
 import Shimmer from '../shimmer/Shimmer';
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../../utils/useOnlineStatus'
 const Body = () => {
     let [restaurantList, setRestaurantList] = useState([]);
     const [searchText, setSearchText] = useState("");
@@ -16,9 +17,19 @@ const Body = () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING")
 
         const json = await data.json();
-        setRestaurantList(json?.data?.cards[2]?.data?.data?.cards);
-        setFiltredRestroList(json?.data?.cards[2]?.data?.data?.cards)
+
+
+        console.log(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants);
+        setRestaurantList(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants);
+        setFiltredRestroList(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants)
+
+        console.log(restaurantList);
+        console.log("Above is the json data")
     }
+    const onlineStatus = useOnlineStatus();
+
+    if(onlineStatus === false) return <h1>Looks like you are offline !! please check your internet connection .</h1>
+
     if(restaurantList.length === 0){
         return(
             <div className="body">
@@ -55,7 +66,7 @@ const Body = () => {
                 {
                     filtredRestroList.map((ele) => {
                         return(
-                            <Link to={"/restaurants/" + ele?.data?.id} key={ele?.data?.id}><RestaurantCard img={CDN_URL + ele?.data?.cloudinaryImageId} name={ele?.data?.name} cuisines={ele?.data?.cuisines.join(", ")}/></Link>
+                            <Link to={"/restaurants/" + ele?.data?.id} key={ele?.data?.id}><RestaurantCard img={CDN_URL + ele?.info?.cloudinaryImageId} name={ele?.info?.name} cuisines={ele?.info?.cuisines.join(", ")}/></Link>
                         )
                     })
                 }
