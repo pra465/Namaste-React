@@ -229,3 +229,24 @@ path: /restaurants/:resID -> this is the dynamic path
 ** Lazy loading - when app is initially loaded then grocery is not loaded. 
 
 ** Grocery is loaded when we go to the grocery url
+
+# Episode 10 Jo dikhta hai vo bikta hai
+
+Ways to add styling in react
+
+** CSS, SAAS -> not a recomended way in react.
+
+** styled components -> most companies use this
+
+** Material UI, Bootstrap, chkara ui
+
+** Tailwind works with all the frameworks, we can use it with js as well.
+
+** if a specific class does not exist then we can write that like -> w-[200px]
+
+** Tailwind is lightweight.
+
+# Episode 11 Data is the new oil
+
+** Higher order functions - 
+Higher order component is a function which takes a component and returns a component
